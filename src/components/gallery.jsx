@@ -5,6 +5,7 @@ function Gallery() {
 
   useEffect(() => {
     getAnimals();
+    setAnimals(data.slice(0,5))
   }, []);
 
   const getAnimals = async () => {
@@ -22,46 +23,46 @@ function Gallery() {
       <card>
         <img src={data.image_link}></img>
         <h1>{data.name}</h1>
-        <p className="latinName">{data.latin_name}</p>
-        <p className="habitat">{data.habitat}</p>
-        <p className="diet">{data.diet}</p>
-        <p className="localization">{data.georange}</p>
+        <p className="latinName">Latin Name: {data.latin_name}</p>
+        <p className="habitat">Habitat: {data.habitat}</p>
+        <p className="diet">Diet: {data.diet}</p>
+        <p className="localization">Location: {data.geo_range}</p>
       </card>
       
       <card>
         <img src={data.image_link}></img>
         <h1>{data.name}</h1>
-        <p className="latinName">{data.latin_name}</p>
-        <p className="habitat">{data.habitat}</p>
-        <p className="diet">{data.diet}</p>
-        <p className="localization">{data.georange}</p>
+        <p className="latinName">Latin Name: {data.latin_name}</p>
+        <p className="habitat">Habitat: {data.habitat}</p>
+        <p className="diet">Diet: {data.diet}</p>
+        <p className="location">Location: {data.geo_range}</p>
       </card>
       
       <card>
         <img src={data.image_link}></img>
         <h1>{data.name}</h1>
-        <p className="latinName">{data.latin_name}</p>
-        <p className="habitat">{data.habitat}</p>
-        <p className="diet">{data.diet}</p>
-        <p className="localization">{data.georange}</p>
+        <p className="latinName">Latin Name: {data.latin_name}</p>
+        <p className="habitat">Habitat: {data.habitat}</p>
+        <p className="diet">Diet: {data.diet}</p>
+        <p className="location">Location: {data.geo_range}</p>
       </card>
       
       <card>
         <img src={data.image_link}></img>
         <h1>{data.name}</h1>
-        <p className="latinName">{data.latin_name}</p>
-        <p className="habitat">{data.habitat}</p>
-        <p className="diet">{data.diet}</p>
-        <p className="localization">{data.georange}</p>
+        <p className="latinName">Latin Name: {data.latin_name}</p>
+        <p className="habitat">Habitat: {data.habitat}</p>
+        <p className="diet">Diet: {data.diet}</p>
+        <p className="location">Location: {data.geo_range}</p>
       </card>
       
       <card>
         <img src={data.image_link}></img>
         <h1>{data.name}</h1>
-        <p className="latinName">{data.latin_name}</p>
-        <p className="habitat">{data.habitat}</p>
-        <p className="diet">{data.diet}</p>
-        <p className="localization">{data.georange}</p>
+        <p className="latinName">Latin Name: {data.latin_name}</p>
+        <p className="habitat">Habitat: {data.habitat}</p>
+        <p className="diet">Diet: {data.diet}</p>
+        <p className="location">Location: {data.geo_range}</p>
       </card>
     </div>
   );

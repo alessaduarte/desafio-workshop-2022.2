@@ -21,10 +21,10 @@ function Animals() {
     <div className='container'>
       <img src={data.image_link}></img>
       <h1>{data.name}</h1>
-      <p className="latinName">{data.latin_name}</p>
-      <p className="habitat">{data.habitat}</p>
-      <p className="diet">{data.diet}</p>
-      <p className="localization">{data.geo_range}</p>
+      <p className="latinName">Latin name: {data.latin_name}</p>
+      <p className="habitat">Habitat: {data.habitat}</p>
+      <p className="diet">Diet: {data.diet}</p>
+      <p className="location">Location: {data.geo_range}</p>
       <button className="btn" onClick={getAnimals}>Get Another Animal</button>
     </div>
   );

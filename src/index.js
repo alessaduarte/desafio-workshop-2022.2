@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
-import About from './routes/about.page';
+import Home from './routes/home.page';
 import Animals from './routes/animals.page';
 import Gallery from './routes/gallery.page';
 import Navbar from './components/navbar';
@@ -15,7 +15,7 @@ const router = createBrowserRouter ([
     children: [
       {
         path: "/",
-        element: <About />
+        element: <Home />
       },
       {
         path: "/animals",
