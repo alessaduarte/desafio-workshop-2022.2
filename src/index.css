@@ -58,6 +58,16 @@ li {
   display: flex;
 }
 
+.about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.information {
+  display: flex;
+  align-items: center;
+}
 card {
   background-color: #fff;
   height: 500px;
