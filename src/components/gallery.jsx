@@ -1,28 +1,68 @@
 import { useEffect, useState } from "react";
 
 function Gallery() {
-  const [animal, setAnimal] = useState("Animals");
+  const [data, setAnimals] = useState("Animals");
 
   useEffect(() => {
-    getAnimal();
+    getAnimals();
   }, []);
 
-  const getAnimal = async () => {
-    const response = await fetch("https://zoo-animal-api.herokuapp.com/", {
+  const getAnimals = async () => {
+    const response = await fetch("https://zoo-animal-api.herokuapp.com/animals/rand", {
       headers: {
         Accept: "application/json",
       },
     });
     const data = await response.json();
-    setAnimal(data.animal);
+    setAnimals(data);
   };
 
   return (
-    <div className='container'>
-      <h1></h1>
-      <p className="animal">{animal}</p>
-      <img src="image_link"></img>
-      <button className="btn" onClick={getAnimal}>Get Another Animal</button>
+    <div className='card-container'>
+      <card>
+        <img src={data.image_link}></img>
+        <h1>{data.name}</h1>
+        <p className="latinName">{data.latin_name}</p>
+        <p className="habitat">{data.habitat}</p>
+        <p className="diet">{data.diet}</p>
+        <p className="localization">{data.georange}</p>
+      </card>
+      
+      <card>
+        <img src={data.image_link}></img>
+        <h1>{data.name}</h1>
+        <p className="latinName">{data.latin_name}</p>
+        <p className="habitat">{data.habitat}</p>
+        <p className="diet">{data.diet}</p>
+        <p className="localization">{data.georange}</p>
+      </card>
+      
+      <card>
+        <img src={data.image_link}></img>
+        <h1>{data.name}</h1>
+        <p className="latinName">{data.latin_name}</p>
+        <p className="habitat">{data.habitat}</p>
+        <p className="diet">{data.diet}</p>
+        <p className="localization">{data.georange}</p>
+      </card>
+      
+      <card>
+        <img src={data.image_link}></img>
+        <h1>{data.name}</h1>
+        <p className="latinName">{data.latin_name}</p>
+        <p className="habitat">{data.habitat}</p>
+        <p className="diet">{data.diet}</p>
+        <p className="localization">{data.georange}</p>
+      </card>
+      
+      <card>
+        <img src={data.image_link}></img>
+        <h1>{data.name}</h1>
+        <p className="latinName">{data.latin_name}</p>
+        <p className="habitat">{data.habitat}</p>
+        <p className="diet">{data.diet}</p>
+        <p className="localization">{data.georange}</p>
+      </card>
     </div>
   );
 }
