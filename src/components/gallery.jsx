@@ -5,7 +5,6 @@ function Gallery() {
 
   useEffect(() => {
     getAnimals();
-    setAnimals(data.slice(0,5))
   }, []);
 
   const getAnimals = async () => {
